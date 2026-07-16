@@ -1,153 +1,229 @@
-# VectorAI VS Code Plugin
+# 🧠 Triminds VectorAI for Visual Studio Code
 
 <img width="1024" height="1024" alt="vectorPlugin" src="https://github.com/user-attachments/assets/0e57484a-e59a-4f10-86b8-8af35b3b6b69" />
 
+![VS Code](https://img.shields.io/badge/VS%20Code-Extension-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
+![AI](https://img.shields.io/badge/Artificial%20Intelligence-Developer%20Tools-success)
+![Embeddings](https://img.shields.io/badge/Vector-Embeddings-purple)
+![MIT](https://img.shields.io/badge/License-MIT-yellow)
 
-## Overview
+## AI-Powered Developer Assistant for Visual Studio Code
 
-VectorAI is an AI-powered Visual Studio Code extension designed to improve developer productivity by bringing semantic search, embeddings generation, and intelligent code assistance directly into the development environment.
+**Triminds VectorAI** is an AI-powered Visual Studio Code extension that enhances developer productivity through semantic search, embedding generation and intelligent code assistance directly inside the editor.
 
-The extension provides AI capabilities for developers working with vector databases, semantic retrieval, and modern AI workflows, including PostgreSQL with pgvector and embedding-based search architectures.
-
-The project is built with TypeScript using the Visual Studio Code Extension API, with AI integrations through Hugging Face models and vector-based technologies.
+Unlike the enterprise applications in the Triminds ecosystem, **VectorAI is a standalone developer tool**. It is designed to assist software engineers building modern AI applications, including the Triminds products themselves.
 
 ---
 
-# Features
+# 🌐 Part of the Triminds Ecosystem
+
+Triminds VectorAI is one of the engineering tools developed within the **Triminds** ecosystem.
+
+Rather than consuming services from the Triminds Platform, VectorAI supports the development of the entire ecosystem by providing AI-assisted coding capabilities directly inside Visual Studio Code.
+
+```text
+                    Triminds
+
+          ┌────────────────────────────┐
+          │                            │
+  Enterprise Products          Developer Tools
+          │                            │
+          │                    Triminds VectorAI
+          │
+   ├── Platform UI
+   ├── Geo AI
+   ├── Security
+   ├── SmartImageLab
+   └── ObjectScanner
+```
+
+This distinction allows VectorAI to remain completely independent while contributing to the productivity and quality of all Triminds projects.
+
+---
+
+# 🚀 Overview
+
+VectorAI brings modern AI capabilities directly into the development environment through semantic search, vector embeddings and intelligent developer assistance.
+
+The extension targets developers building applications involving:
+
+* Large Language Models (LLMs)
+* Retrieval-Augmented Generation (RAG)
+* Vector Databases
+* Semantic Search
+* AI-powered Software Engineering
+* PostgreSQL + pgvector
+* Embedding-based Architectures
+
+Built with TypeScript and the Visual Studio Code Extension API, VectorAI integrates modern AI models with a lightweight and extensible architecture.
+
+---
+
+# ✨ Features
 
 ## 🧠 Embedding Generation
 
-Generate vector embeddings from selected text directly inside VS Code.
+Generate vector embeddings directly from selected code or text.
 
-Capabilities:
+Capabilities include:
 
-- Transform code or text into numerical representations
-- Prepare content for semantic retrieval workflows
-- Support AI-powered developer tools
-
-
-## 🔍 Semantic Search
-
-Perform similarity-based searches using vector embeddings.
-
-Designed to support:
-
-- Vector databases
-- Knowledge retrieval
-- RAG (Retrieval Augmented Generation) workflows
-
-
-## 💡 AI Optimization Suggestions
-
-Receive AI-powered suggestions for improving queries and developer content.
-
-Current scenarios:
-
-- SQL optimization suggestions
-- Intelligent recommendations
-- AI-assisted analysis
-
-
-## ⚡ Native VS Code Experience
-
-Integrated directly into the editor:
-
-- Command Palette
-- Context actions
-- VS Code notifications
-- Extension commands
+* Semantic indexing
+* Embedding generation
+* AI-ready document processing
+* Knowledge retrieval preparation
 
 ---
 
-# Architecture
+## 🔍 Semantic Search
 
-VectorAI follows a layered architecture:
-src/
-├── extension.ts
+Search code and documentation using vector similarity instead of keyword matching.
+
+Supports:
+
+* Vector databases
+* pgvector
+* RAG pipelines
+* AI-powered documentation search
+
+---
+
+## 💡 AI Optimization Suggestions
+
+Receive AI-powered recommendations for improving developer workflows.
+
+Examples:
+
+* SQL optimization
+* Prompt improvement
+* Query suggestions
+* Documentation enhancement
+* Code quality recommendations
+
+---
+
+## ⚡ Native Visual Studio Code Integration
+
+Integrated seamlessly into VS Code through:
+
+* Command Palette
+* Context Menus
+* Notifications
+* Extension Commands
+* Editor Actions
+
+---
+
+# 🏗 Architecture
+
+```text
+VectorAI Extension
+
 │
+
+├── VS Code Commands
+
+├── AI Services
+
+├── Embedding Engine
+
+├── Database Connectors
+
+├── Provider Abstraction
+
+└── Logging
+```
+
+```text
+src/
+
+├── extension.ts
+
 ├── commands/
-│ ├── generateEmbedding.ts
-│ ├── semanticSearch.ts
-│ └── suggestOptimization.ts
+│   ├── generateEmbedding.ts
+│   ├── semanticSearch.ts
+│   └── suggestOptimization.ts
 │
 ├── services/
-│ ├── huggingfaceService.ts
-│ ├── dbConnector.ts
-│ └── VectorAIService.ts
+│   ├── huggingfaceService.ts
+│   ├── dbConnector.ts
+│   └── VectorAIService.ts
 │
 ├── utils/
-│ └── logger.ts
+│   └── logger.ts
 │
 ├── tests/
 │
 └── mocks/
-
-
-## Architectural Principles
-
-- Separation of responsibilities
-- Service-based integrations
-- Testable commands
-- Provider abstraction
-- AI service isolation
-
-Architecture decisions are documented using ADRs.
+```
 
 ---
 
-# Commands
+# 🎯 Architectural Principles
 
-Available commands:
+* Modular Design
+* Separation of Concerns
+* Provider Abstraction
+* AI Service Isolation
+* Testability
+* Extensibility
+* Developer-First Experience
 
-### `vectorAI.generateEmbedding`
-
-Generates embeddings from selected text.
-
-### `vectorAI.semanticSearch`
-
-Executes semantic similarity search using vector embeddings.
-
-### `vectorAI.suggestOptimization`
-
-Generates AI-powered improvement suggestions.
+Architecture decisions are documented through ADRs (Architecture Decision Records).
 
 ---
 
-# Technology Stack
+# ⚙ Available Commands
+
+| Command                        | Description                                      |
+| ------------------------------ | ------------------------------------------------ |
+| `vectorAI.generateEmbedding`   | Generate vector embeddings from selected content |
+| `vectorAI.semanticSearch`      | Execute semantic similarity searches             |
+| `vectorAI.suggestOptimization` | Generate AI-powered recommendations              |
+
+---
+
+# 🛠 Technology Stack
 
 ## Core
 
-- TypeScript
-- Visual Studio Code Extension API
-- Node.js
+* TypeScript
+* Node.js
+* Visual Studio Code Extension API
 
-## AI
+## Artificial Intelligence
 
-- Hugging Face Models
-- Embedding generation
-- Semantic similarity search
+* Hugging Face Models
+* Sentence Embeddings
+* Semantic Search
+* Vector Similarity
 
 ## Database
 
-- PostgreSQL
-- pgvector support
+* PostgreSQL
+* pgvector
 
 ## Testing
 
-- Jest
-- ts-jest
-- VS Code API mocks
+* Jest
+* ts-jest
+* VS Code API Mocks
 
 ## Tooling
 
-- ESLint
-- TypeScript Compiler
-- VSCE Packaging
+* ESLint
+* TypeScript Compiler
+* VSCE Packaging
+* GitHub Actions
 
 ---
 
-# Development
+# 🌟 Role within the Triminds Ecosystem
 
-Install dependencies:
+Unlike the enterprise applications developed by Triminds, **VectorAI is an engineering productivity tool**.
 
-npm install
+Its mission is to accelerate the development of AI solutions by providing intelligent capabilities directly inside the IDE.
+
+As new Triminds products evolve, VectorAI evolves alongside them—helping developers build, test and maintain high-quality software through reusable AI-assisted workflows.
+
+This independent architecture allows VectorAI to be adopted in any software project, whether inside or outside the Triminds ecosystem.
