@@ -5,17 +5,15 @@
   "version": "0.1.0",
   "publisher": "RodrigoDiasDeOliveira",
   "repository": {
-  "type": "git",
-  "url": "https://github.com/RodrigoDiasDeOliveira/vectorai-vscode-plugin"
-},
+    "type": "git",
+    "url": "https://github.com/RodrigoDiasDeOliveira/Triminds-VectorAI-for-Visual-Studio-Code.git"
+  },
   "engines": {
     "vscode": "^1.85.0"
-
   },
   "categories": [
     "Other"
   ],
-
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
